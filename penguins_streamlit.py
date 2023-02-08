@@ -12,6 +12,9 @@ st.write('This app uses 06 inputs to predict the species of penguin using'
          'a model built on the Penguin dataset. Use the form below to get'
          'started.')
 
+password_guess = st.text_input("Password?")
+if (password_guess != st.secrets['password']): st.stop()
+
 penguin_file = st.file_uploader('Upload data')
 rf_pickle = open('random_forest_penguin.pickle', 'rb')
 map_pickle = open('output_penguin.pickle', 'rb')
