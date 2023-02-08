@@ -55,7 +55,7 @@ sex_male, sex_female = 0, 0
 if (sex == 'Male'): sex_male = 1
 elif (sex == 'Female'): sex_female = 1
 
-st.subheader("Predicting Penguin's Species:")
+st.subheader("Penguin Classifier: A Machine Learning App")
 prediction = rfc.predict([[bill_length, bill_depth, flipper_length, body_mass,
               island_biscoe, island_dream, island_torgerson, sex_female, sex_male]])
 prediction_species = unique_penguin_mapping[prediction][0]
